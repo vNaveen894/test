@@ -1,0 +1,684 @@
+.apex-menuhead-icon {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.apex-menuhead-icon::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0,
+        12px 0 0, 0 12px 0;
+    border-radius: 22px;
+}
+.head-asterisk-icon {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    box-shadow: inset 0 0 0 2px;
+}
+/* #E85222 */
+.head-asterisk-icon::after,
+.head-asterisk-icon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 2px;
+    height: 12px;
+    background: currentColor;
+    transform: rotate(55deg);
+}
+.head-asterisk-icon::after {
+    transform: rotate(-55deg);
+}
+/* downchevron */
+/* grid menu close button */
+.menu-close-icon {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    /* transform: scale(var(--ggs,1)); */
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+}
+.menu-close-icon::after,
+.menu-close-icon::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 1px;
+}
+.menu-close-icon::after {
+    transform: rotate(-45deg);
+}
+/* grid menu close button */
+
+.menu-down-chevron {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid currentColor;
+    border-radius: 8px;
+    transform: rotate(180deg);
+    transition-delay: 0.5s;
+}
+/* downchevron */
+/* play button icon */
+.video-play-button {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+.video-play-button::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
+    top: 4px;
+    left: 7px;
+}
+/* play button icon */
+
+/* menu dropdown css */
+
+.header-menu-desk a {
+    text-decoration: none;
+}
+.apexmenu-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.apexmenu-list-text {
+    color: #525252;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+.apexmenu-item:hover .menu-down-chevron {
+    transform: rotate(0deg);
+    color: #0eb48d;
+    transition: all 0.5s ease-in-out;
+}
+.apexmenu-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.5s;
+    transform: scaleY(0);
+    z-index: 10;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+}
+
+.apexmenu-item:hover .apexmenu-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scaleY(1);
+    transform-origin: top center;
+    z-index: 9999;
+}
+.apexmenu-item {
+    position: relative;
+    box-sizing: border-box;
+}
+#specialiy_dropdown {
+    width: 650px;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+.apexmenu-dropdown-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.apexmenu-dropdown-list-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-block: 0 10px;
+    color: #292929;
+}
+.apexmenu-dropdown-list-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-height: 450px;
+    height: 400px;
+    overflow-x: scroll;
+    width: 100%;
+}
+.apexmenu-dropdown-list-text {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #7a7a7a;
+    padding-block: 8px;
+    text-transform: uppercase;
+    display: block;
+    box-sizing: border-box;
+}
+#location_dropdown {
+    width: 350px;
+    max-width: 370px;
+    box-sizing: border-box;
+}
+#apexmain_dropdown {
+    width: 200px;
+    top: 80px;
+    max-width: 220px;
+    box-sizing: border-box;
+}
+/* mobile dropdown menu  */
+.apexmenu-item-mobile:hover .menu-down-chevron {
+    transform: rotate(0deg);
+    color: #0eb48d;
+    transition: all 0.5s ease-in-out;
+}
+.apexmenu-dropdown-mobile {
+    position: absolute;
+    top: unset;
+    right: unset;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: unset;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    /* transition-delay: 0.5s; */
+    transform: scaleY(0);
+    z-index: 10;
+    border: unset;
+    border-radius: 25px;
+    box-sizing: border-box;
+    height: auto;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.apexmenu-item-mobile:hover .apexmenu-dropdown-mobile {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+        position 0.3s ease-in-out;
+    transform: scaleY(1);
+    transform-origin: top center;
+    z-index: 9999;
+}
+.apexmenu-item-mobile {
+    position: relative;
+    box-sizing: border-box;
+}
+.accordian-main a,
+.apexmenu-item-mobile a {
+    text-decoration: none;
+}
+/* mobile dropdown menu  */
+
+/* menu dropdown css */
+.header-navbar {
+    position: relative;
+    box-sizing: border-box;
+}
+.header-container {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header-contact-holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-block: 10px;
+}
+.head-contact-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 16px;
+    padding-block: 8px;
+    gap: 8px;
+    border-radius: 40px;
+    border: 1px solid #54af3b;
+    text-decoration: none;
+}
+.head-contact-button.emergency {
+    border: 1px solid #e85222;
+}
+.head-contact-span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-inline: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #525252;
+}
+.apex-logo {
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+    object-position: center;
+    max-width: 200px;
+}
+.head-contact-icon {
+    width: 100%;
+    height: 20px;
+    object-fit: contain;
+    object-position: center;
+    max-width: 24px;
+}
+.head-contact-button-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 16px;
+    padding-block: 8px;
+    gap: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #54af3b;
+    text-decoration: none;
+    background: #525252;
+    color: #ffffff;
+}
+.nav-head-desk {
+    position: relative;
+    box-sizing: border-box;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    z-index: 20;
+}
+.header-menu-desk {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 0;
+}
+.header-menu-mobile {
+    display: none;
+}
+.desktop-menu {
+    display: flex;
+    padding: 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    border: 1px solid #525252;
+    background: #ffffff;
+}
+.head-doctor-button {
+    display: flex;
+    padding: 14px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    border: 1px solid #fafafa;
+    background: #3757a1;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+nav .burger {
+    position: relative;
+    display: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2em;
+    border: none;
+    outline: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(0);
+    transition: 0.35s ease-in-out;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+    border: 1px solid #525252;
+    background: #ffffff;
+}
+.burger.is-active .menu-close-icon,
+.burger .apex-menuhead-icon {
+    display: block;
+}
+.burger.is-active .apex-menuhead-icon,
+.burger .menu-close-icon {
+    display: none;
+}
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1350px) {
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1199px) {
+}
+@media only screen and (min-device-width: 993px) and (max-device-width: 1024px) {
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+    .header-contact-holder,
+    .header-menu-desk {
+        display: none;
+    }
+    .header-menu-mobile {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 0;
+    }
+    .apexmenu-item {
+        position: unset;
+    }
+    #apexmain_dropdown {
+        width: calc(100% - 80px);
+        top: 80px;
+        right: 30px;
+        box-sizing: border-box;
+    }
+    nav {
+        padding: 15px 2em;
+    }
+
+    .header-navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1440px;
+        position: relative;
+        z-index: 20;
+    }
+    .header-navbar {
+        flex-wrap: wrap;
+        transition: 0.5s ease all;
+    }
+    .navbar-fixed-top {
+        height: auto;
+    }
+    nav .burger {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav .header-menu-mobile {
+        width: 100%;
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s ease;
+        position: relative;
+        z-index: 20;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
+    nav .header-menu-mobile.is-active {
+        opacity: 1;
+        display: block;
+        max-height: auto;
+        height: auto;
+        visibility: visible;
+        transition: all 0.35s ease;
+    }
+    nav .astermenu-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0px;
+        padding: 1rem 0;
+    }
+    .show-navbar {
+        /* background: linear-gradient(
+            180deg,
+            #f3f0ed 0,
+            #fff 15%,
+            #f3f0ed 8%,
+            #f3f0ed 100%
+        ); */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    #specialiy_dropdown_mobile {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .apexmenu-dropdown-list-content {
+        flex-direction: column;
+        max-height: none;
+        height: auto;
+        width: 100%;
+    }
+    .apex-mobile-menu {
+        position: relative;
+        overflow-y: scroll;
+        box-sizing: border-box;
+    }
+    .apexmenu-list-text,
+    .apexmenu-dropdown-list-text2 {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 300;
+        color: #000000;
+        padding-block: 8px;
+        text-transform: uppercase;
+        display: block;
+        box-sizing: border-box;
+        text-decoration: none;
+        width: fit-content;
+    }
+    .apexmenu-item-mobile,
+    .apexmenu-list-item {
+        width: fit-content;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .header-contact-holder,
+    .header-menu-desk {
+        display: none;
+    }
+    .header-menu-mobile {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 0;
+    }
+    .apexmenu-item {
+        position: unset;
+    }
+    #apexmain_dropdown {
+        width: calc(100% - 80px);
+        top: 80px;
+        right: 30px;
+        box-sizing: border-box;
+    }
+    nav {
+        padding: 15px 2em;
+    }
+
+    .header-navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1440px;
+        position: relative;
+        z-index: 20;
+    }
+    .header-navbar {
+        flex-wrap: wrap;
+        transition: 0.5s ease all;
+    }
+    .navbar-fixed-top {
+        height: auto;
+    }
+    nav .burger {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav .header-menu-mobile {
+        width: 100%;
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s ease;
+        position: relative;
+        z-index: 20;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
+    nav .header-menu-mobile.is-active {
+        opacity: 1;
+        display: block;
+        max-height: auto;
+        height: auto;
+        visibility: visible;
+        transition: all 0.35s ease;
+    }
+    nav .astermenu-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0px;
+        padding: 1rem 0;
+    }
+    .show-navbar {
+        /* background: linear-gradient(
+            180deg,
+            #f3f0ed 0,
+            #fff 15%,
+            #f3f0ed 8%,
+            #f3f0ed 100%
+        ); */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    #specialiy_dropdown_mobile {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .apexmenu-dropdown-list-content {
+        flex-direction: column;
+        max-height: none;
+        height: auto;
+        width: 100%;
+    }
+    .apex-mobile-menu {
+        position: relative;
+        overflow-y: scroll;
+        box-sizing: border-box;
+    }
+    .apexmenu-list-text,
+    .apexmenu-dropdown-list-text2 {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 300;
+        color: #000000;
+        padding-block: 8px;
+        text-transform: uppercase;
+        display: block;
+        box-sizing: border-box;
+        text-decoration: none;
+        width: fit-content;
+    }
+    .apexmenu-item-mobile,
+    .apexmenu-list-item {
+        width: fit-content;
+    }
+}
+@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 550px) {
+    #specialiy_dropdown_mobile {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 375px) {
+}
